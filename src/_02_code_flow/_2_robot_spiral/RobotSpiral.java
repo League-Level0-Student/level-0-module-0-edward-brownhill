@@ -12,13 +12,18 @@ public class RobotSpiral {
 	public static void main(String[] args) {
 		
 		// Create a new Robot
-		
+		Robot robot2 = new Robot();
 		// Set your robot's pen down 
-		
+		robot2.penDown();
 		// SPEED. Set the robot to go at max speed (100)
-		
+		robot2.setSpeed(100);
         // LOOP. Use a for loop to repeat ALL the following lines of code 50 times. 
-		
+		for (int i = 0; i < 50; i++) {
+			robot2.setRandomPenColor();
+			robot2.move(5*i);
+			robot2.turn(360/7);
+			robot2.setPenWidth(i);
+		}
 				// Change the robot pen color to random
 			
 				// DRAW.    Move the robot (5*i) pixels
